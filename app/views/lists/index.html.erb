@@ -1,0 +1,13 @@
+
+<h1>Lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+    <!-- pass (list) as a parameter to rails knows to grab the list id -->
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "New List", new_list_path %>
